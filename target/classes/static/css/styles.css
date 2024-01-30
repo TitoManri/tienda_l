@@ -15,20 +15,60 @@ body{
     padding: 80px 20px 0px 0px;
 }
 
-header{
+.encabezado{
     background-color: #000000;
     position: fixed;
     top: 0;
     left:0;
-    height: 80px;
+    height: 90px;
     width: 100%;
     
+}
+
+.navegacion{
+    display:flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size:40px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+}
+
+.nav-menu{
+    display: flex;
+    font-size: 18px;
+    line-height: 90px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    margin: 0 10px;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-menu-link:hover{
+    background-color: #cccccc;
+    transition-delay: 0.5s;
 }
 
 aside{
     position: fixed;
     background-color: #cccccc;
-    top: 80px;
+    top: 90px;
     left:0;
     bottom: 20px;
     width: 20%; 
@@ -38,7 +78,7 @@ section{
     position: fixed;
     overflow-y: scroll;
     background-color: #ffffff;
-    top: 80px;
+    top: 90px;
     left: 20%;
     bottom: 20px;
     right: 0; 
@@ -54,18 +94,7 @@ footer{
    text-align: center;
 }
 
-nav a {
-    text-decoration: none;
-    background-color: #ffffff;
-    color: black;
-    font-size: 20px;
-    
-}
 
-a:hover{
-    background-color: black;
-    color: white;
-}
 
 tr:nth-child(odd){
     background-color: #ffffff;
