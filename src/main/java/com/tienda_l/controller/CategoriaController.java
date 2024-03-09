@@ -40,8 +40,7 @@ public class CategoriaController {
     @PostMapping("/guardar")
     public String categoriaGuardar(Categoria categoria,
             @RequestParam("imagenFile") MultipartFile imagenFile) {        
-        if (!imagenFile.isEmpty()) { // Para saber si, si si subieron una foto
-            //Si estamos aca hay que guardar la foto
+        if (!imagenFile.isEmpty()) {
             categoriaService.save(categoria);
             categoria.setRutaImagen(
                     firebaseStorageService.cargaImagen(
@@ -59,8 +58,8 @@ public class CategoriaController {
         return "redirect:/categoria/listado";
     }
 
-    @GetMapping("/modifica/{idCategoria}")
-    public String categoriaModifica(Categoria categoria, Model model) {
+    @GetMapping("/modificar/{idCategoria}")
+    public String categoriaModificar(Categoria categoria, Model model) {
         categoria = categoriaService.getCategoria(categoria);
         model.addAttribute("categoria", categoria);
         return "/categoria/modifica";

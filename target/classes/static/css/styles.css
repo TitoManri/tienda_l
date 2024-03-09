@@ -1,0 +1,107 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 22, 2024, 7:50:46 PM
+    Author     : manri
+*/
+
+body{
+    box-sizing: border-box;
+    background-color: #cccccc;
+    margin: 0;
+    font-family: sans-serif;
+    padding: 80px 20px 0px 0px;
+}
+
+.encabezado{
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 90px;
+    width: 100%;
+    
+}
+
+.navegacion{
+    display:flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size:40px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+}
+
+.nav-menu{
+    display: flex;
+    font-size: 18px;
+    line-height: 90px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    margin: 0 10px;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-menu-link:hover{
+    background-color: #cccccc;
+    transition-delay: 0.5s;
+}
+
+aside{
+    position: fixed;
+    background-color: #cccccc;
+    top: 90px;
+    left:0;
+    bottom: 20px;
+    width: 20%; 
+}
+
+section{
+    position: fixed;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    top: 90px;
+    left: 20%;
+    bottom: 20px;
+    right: 0; 
+}
+
+footer{
+   position: fixed;
+   background-color: #ffffff;
+   left: 0;
+   bottom: 0;
+   right: 0; 
+   height: 40px;
+   text-align: center;
+}
+
+
+
+tr:nth-child(odd){
+    background-color: #ffffff;
+    color: black;
+}
+
+tr:nth-child(even){
+   background-color: black;
+   color: white; 
+}
