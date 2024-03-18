@@ -57,5 +57,16 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> metodoJPQL (double precioInf, double precioSup){
         return productoDao.metodoJPQL(precioInf, precioSup);
     }
+   
+
+    @Override
+    public List<Producto> getProductosByPrecioBetweenOrderByPrecioAsc(double precioInf, double precioSup) {
+        return productoDao.findByPrecioBetweenOrderByPrecioAsc(precioInf, precioSup);
+    }
+
+    @Override
+    public List<Producto> getProductosByPrecioBetweenOrderByPrecioDesc(double precioInf, double precioSup) {
+        return productoDao.findByPrecioBetweenOrderByPrecioDesc(precioInf, precioSup);
+    }
     
 }

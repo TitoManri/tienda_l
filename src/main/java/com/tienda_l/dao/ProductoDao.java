@@ -21,4 +21,11 @@ public interface ProductoDao extends JpaRepository <Producto, Long>{
     @Query(value="SELECT a FROM Producto a where a.precio BETWEEN :precioInf AND :precioSup ORDER BY a.descripcion ASC")
     public List<Producto> metodoJPQL(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);
     
+   
+    @Query("SELECT p FROM Producto p WHERE p.precio BETWEEN :precioInf AND :precioSup ORDER BY p.precio ASC")
+    public List<Producto> findByPrecioBetweenOrderByPrecioAsc(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);   
+    @Query("SELECT p FROM Producto p WHERE p.precio BETWEEN :precioInf AND :precioSup ORDER BY p.precio DESC")
+    public List<Producto> findByPrecioBetweenOrderByPrecioDesc(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);
+    
+    
 }

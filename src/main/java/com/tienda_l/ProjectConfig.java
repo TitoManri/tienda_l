@@ -18,7 +18,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration
 public class ProjectConfig implements WebMvcConfigurer {
-    
+
     @Bean
     public LocaleResolver localeResolver() {
         var slr = new SessionLocaleResolver();
@@ -27,42 +27,45 @@ public class ProjectConfig implements WebMvcConfigurer {
         slr.setTimeZoneAttributeName("session.current.timezone");
         return slr;
     }
-    
+
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
         var lci = new LocaleChangeInterceptor();
-        lci.setParamName("lang");        
+        lci.setParamName("lang");
         return lci;
     }
-    
+
     @Override
     public void addInterceptors(InterceptorRegistry registro) {
         registro.addInterceptor(localeChangeInterceptor());
     }
-    /* Los siguiente métodos son para implementar el tema de seguridad dentro del proyecto */
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
-        registry.addViewController("/index").setViewName("index");
-        registry.addViewController("/login").setViewName("login");
-        registry.addViewController("/registro/nuevo").setViewName("/registro/nuevo");
- }
 
-@Bean
+    @Override
+    public void addViewControllers(ViewControllerRegistry registro) {
+        registro.addViewController("/").setViewName("index");
+        registro.addViewController("/index").setViewName("index");
+        registro.addViewController("/login").setViewName("login");
+        registro.addViewController("/registro/nuevo").setViewName("/registro/nuevo");
+    }
+
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
         http.authorizeHttpRequests((request) -> request
-                .requestMatchers("/","/index","/errores/**",
-                        "/carrito/**","/pruebas/**","/reportes/**",
-                        "/registro/**","/js/**","/webjars/**")
-                        .permitAll()
+                .requestMatchers("/", "/index",
+                        "/carrito/**",
+                        "/registro/**",
+                        "/js/**",
+                        "/webjars/**").permitAll()
                 .requestMatchers(
-                        "/producto/nuevo","/producto/guardar",
-                        "/producto/modificar/**","/producto/eliminar/**",
-                        "/categoria/nuevo","/categoria/guardar",
-                        "/categoria/modificar/**","/categoria/eliminar/**",
-                        "/usuario/nuevo","/usuario/guardar",
-                        "/usuario/modificar/**","/usuario/eliminar/**",
-                        "/reportes/**"
+                        "/producto/nuevo", "/producto/guardar",
+                        "/producto/modificar/**", "/producto/eliminar/**",
+                        "/categoria/nuevo", "/categoria/guardar",
+                        "/categoria/modificar/**", "/categoria/eliminar/**",
+                        "/usuario/nuevo", "/usuario/guardar",
+                        "/usuario/modificar/**", "/usuario/eliminar/**",
+                        "/reportes/**",
+                        "/pruebas/**"
                 ).hasRole("ADMIN")
                 .requestMatchers(
                         "/producto/listado",
@@ -71,15 +74,13 @@ public class ProjectConfig implements WebMvcConfigurer {
                 ).hasAnyRole("ADMIN", "VENDEDOR")
                 .requestMatchers("/facturar/carrito")
                 .hasRole("USER")
-                )
+        )
                 .formLogin((form) -> form
                 .loginPage("/login").permitAll())
                 .logout((logout) -> logout.permitAll());
         return http.build();
     }
-
-/* El siguiente método se utiliza para completar la clase no es 
-    realmente funcional, la próxima semana se reemplaza con usuarios de BD */    
+    
     @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
@@ -87,7 +88,7 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .password("{noop}123")
                 .roles("USER", "VENDEDOR", "ADMIN")
                 .build();
-        UserDetails sales = User.builder()
+        UserDetails vendedor = User.builder()
                 .username("rebeca")
                 .password("{noop}456")
                 .roles("USER", "VENDEDOR")
@@ -97,6 +98,6 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .password("{noop}789")
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user, sales, admin);
+        return new InMemoryUserDetailsManager(user, vendedor, admin);
     }
 }

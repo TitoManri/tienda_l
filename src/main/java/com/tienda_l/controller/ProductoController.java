@@ -27,14 +27,17 @@ public class ProductoController {
     
     @Autowired
     private ProductoService productoService;
+    
     @Autowired
     private CategoriaService categoriaService;
     
     @GetMapping("/listado")
     public String listado(Model model){
         var productos=productoService.getProductos(true);
+        var categorias=categoriaService.getCategorias(true);
         model.addAttribute("productos", productos);
         model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("categorias", categorias);
         return "/producto/listado";
     }
     
@@ -69,9 +72,10 @@ public class ProductoController {
 
     @GetMapping("/modificar/{idProducto}")
     public String productoModificar(Producto producto, Model model) {
-        producto = productoService.getProducto(producto);
-        model.addAttribute("producto", producto);
-        var categorias = categoriaService.getCategorias(true);
+        Producto cat = new Producto();
+        cat = productoService.getProducto(producto);
+        var categorias=categoriaService.getCategorias(true);
+        model.addAttribute("producto", cat);
         model.addAttribute("categorias", categorias);
         return "/producto/modifica";
     }
