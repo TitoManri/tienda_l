@@ -1,7 +1,10 @@
+/Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/dao/UsuarioDao.java
+/Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/domain/Rol.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/domain/Categoria.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/impl/FirebaseStorageServiceImpl.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/controller/CategoriaController.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/ProjectConfig.java
+/Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/UsuarioDetailsService.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/dao/ProductoDao.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/impl/CategoriaServiceImpl.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/dao/CategoriaDao.java
@@ -10,6 +13,8 @@
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/impl/ProductoServiceImpl.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/domain/Producto.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/FirebaseStorageService.java
+/Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/domain/Usuario.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/controller/ProductoController.java
+/Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/impl/UsuarioDetailsServiceImpl.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/ProductoService.java
 /Users/manri/Documents/IMPORTANTE - NO MOVER NI BORRAR/Universidad/Fidelitas/CuartoCuatri/Desarrollo de Aplicaciones Web y Patrones/Portafolio/Tienda_l/tienda_l/src/main/java/com/tienda_l/service/CategoriaService.java

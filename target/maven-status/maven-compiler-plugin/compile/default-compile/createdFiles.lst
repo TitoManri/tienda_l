@@ -1,4 +1,5 @@
 com/tienda_l/service/FirebaseStorageService.class
+com/tienda_l/controller/PruebasController.class
 com/tienda_l/controller/CategoriaController.class
 com/tienda_l/service/impl/CategoriaServiceImpl.class
 com/tienda_l/service/CategoriaService.class
