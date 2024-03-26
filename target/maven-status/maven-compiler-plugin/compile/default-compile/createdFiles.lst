@@ -1,11 +1,16 @@
 com/tienda_l/service/FirebaseStorageService.class
+com/tienda_l/service/UsuarioDetailsService.class
 com/tienda_l/controller/PruebasController.class
 com/tienda_l/controller/CategoriaController.class
+com/tienda_l/domain/Usuario.class
 com/tienda_l/service/impl/CategoriaServiceImpl.class
+com/tienda_l/dao/UsuarioDao.class
 com/tienda_l/service/CategoriaService.class
+com/tienda_l/service/impl/UsuarioDetailsServiceImpl.class
 com/tienda_l/service/impl/ProductoServiceImpl.class
 com/tienda_l/service/impl/FirebaseStorageServiceImpl.class
 com/tienda_l/domain/Producto.class
+com/tienda_l/domain/Rol.class
 com/tienda_l/TiendaApplication.class
 com/tienda_l/domain/Categoria.class
 com/tienda_l/controller/ProductoController.class
